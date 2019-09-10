@@ -1,5 +1,5 @@
 import java.util.Scanner;
-class test{
+class Arrayreverse{
   public static void main(String[] args) {
     Scanner scan = new Scanner(System.in);
     int t;
