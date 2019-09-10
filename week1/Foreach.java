@@ -1,8 +1,7 @@
 import java.util.Scanner;
-class test{
+class Foreach{
   public static void main(String[] args) {
     Scanner scan = new Scanner(System.in);
-    int t;
     System.out.println("Enter the size of array:");
     int size=scan.nextInt();
     int[] array=new int[size];
@@ -10,14 +9,18 @@ class test{
     for (int i=0;i<array.length ;i++ ) {
       array[i]=scan.nextInt();
     }
-    for(int i=0;i<=(array.length)/2;i++){
-      t=array[size-1-i];
-      array[size-1-i]=array[i];
-      array[i]=t;
+    System.out.println("Enter the search element:");
+    int key=scan.nextInt();
+    boolean flag=false;
+    int p=0;
+    for(int n : array){
+      if(n==key){
+          System.out.println("Element is present in the array at position "+p);
+          flag=true;
+          break;
+      }
+      p++;
     }
-    System.out.println("Elements after reversing:");
-    for (int i=0;i<array.length ;i++ ) {
-      System.out.println(array[i]);
-    }
+    if(!flag)System.out.println("Search unsuccessful");
   }
 }
